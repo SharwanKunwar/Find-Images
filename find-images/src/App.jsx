@@ -71,7 +71,7 @@ function App() {
   return (
     <>
       {/* title */}
-      <div className="bg-gray-100 min-h-screen flex flex-col items-center py-8 gap-8 animate__animated animate__fadeIn">
+      <div className="bg-gray-100 lg:min-h-screen flex flex-col items-center py-8 gap-8 animate__animated animate__fadeIn">
         <div className=" flex gap-3 justify-center items-center">
             <img src="/image.png" alt="img" width={40} height={40}/>
             <h1 className="lg:text-4xl text-2xl font-bold text-indigo-600"> Search For Images</h1>
@@ -99,25 +99,25 @@ function App() {
         }
 
         {/* grid-images */}
-        <div className="grid lg:grid-cols-4 lg:gap-12 gap-8 w-9/12">
+        <div className="grid lg:grid-cols-4 lg:gap-12 gap-8 lg:w-9/12 w-[90%]">
        
           {photo.map((item, index) => (
             <div
               key={index}
-              className="bg-neutral-300 rounded-lg flex flex-col justify-center items-center object-center object-cover"
+              className="bg-white rounded-lg flex flex-col justify-center items-center object-center object-cover"
             >
               <img
                 src={item.src.medium}
                 alt={item.alt}
                 className="rounded-md w-full h-[250px] hover:scale-103 transition-transform duration-300"
               />
-              <div className=" w-full h-[75px] p-1">
-                <h1 className="font-medium capitalize">{item.photographer}</h1>
+              <div className=" w-full h-[80px] p-1">
+                <h1 className="font-medium capitalize text-neutral-400">{item.photographer}</h1>
                 <button
                   onClick={() =>
                     downloadImage(item.src.original, item.photographer)
                   }
-                  className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[30px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-cyan-300 hover:via-indigo-500"
+                  className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500"
                 >
                   <i className="ri-download-2-line"></i> Download
                 </button>
@@ -132,8 +132,9 @@ function App() {
 
         {
           photo.length > 0 &&
-          <button onClick={loadMore} className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-[200px] h-[30px] mt-2 rounded-sm text-white transition-transform duration-300 hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-cyan-300 hover:via-indigo-500">More</button>
+          <button onClick={loadMore} className="bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-[200px] h-[40px] mt-10 rounded-sm text-white transition-transform duration-300 hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500">Load More</button>
         }
+        <div className=" text-[13px] text-neutral-400">Developed by Sharwan jung kunwar</div>
         <ToastContainer />
       </div>
     </>
