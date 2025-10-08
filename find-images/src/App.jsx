@@ -85,9 +85,9 @@ function App() {
             type="text"
             
             placeholder="Search Images"
-            className="border-none outline-none bg-white rounded-full lg:w-[500px] w-[250px] h-[40px] pl-5"
+            className="Shadow border-none outline-none bg-white rounded-full lg:w-[500px] w-[250px] h-[40px] pl-5"
           />
-          <button type="submit" className="bg-white hover:bg-gradient-to-br from-indigo-600 to-fuchsia-800 via-indigo-600 rounded-full w-[40px] h-[40px] hover:scale-101 transition-transform ">
+          <button type="submit" className="Shadow bg-white hover:bg-gradient-to-br from-indigo-600 to-fuchsia-800 via-indigo-600 rounded-full w-[40px] h-[40px] hover:scale-101 transition-transform ">
             <i className="ri-search-line text-2xl hover:text-white"></i>
           </button>
         </form>
@@ -107,18 +107,18 @@ function App() {
           {photo.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg flex flex-col justify-center items-center object-center object-cover"
+              className="Shadow bg-white rounded-lg flex flex-col justify-center items-center object-center object-cover"
             >
               <img
                 src={item.src.medium}
                 alt={item.alt}
-                className="rounded-md w-full h-[250px] hover:scale-103 transition-transform duration-300"
+                className="mastShadow rounded-md w-full h-[250px] hover:scale-103 transition-transform duration-300"
               />
               <div className=" w-full h-[80px] p-1">
                 <h1 className="font-medium capitalize text-neutral-400">{item.photographer}</h1>
                 <div className=" flex gap-3 justify-center items-center px-1">
-                  <button onClick={()=>viewImage(item.src.original)} className="bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-cyan-300 hover:via-indigo-500"><i className="ri-eye-line pr-1"></i>View</button>
-                  <button onClick={() => downloadImage(item.src.original, item.photographer)} className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500"><i className="ri-download-2-line"></i> Download</button>
+                  <button onClick={()=>viewImage(item.src.original)} className="Shadow bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-cyan-300 hover:via-indigo-500"><i className="ri-eye-line pr-1"></i>View</button>
+                  <button onClick={() => downloadImage(item.src.original, item.photographer)} className="Shadow bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500"><i className="ri-download-2-line"></i> Download</button>
                 </div>
               </div>
             </div>
@@ -131,7 +131,7 @@ function App() {
 
         {
           photo.length > 0 &&
-          <button onClick={loadMore} className="bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-[200px] h-[40px] mt-10 rounded-sm text-white transition-transform duration-300 hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500">Load More</button>
+          <button onClick={loadMore} className="Shadow bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-[200px] h-[40px] mt-10 rounded-sm text-white transition-transform duration-300 hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500">Load More</button>
         }
         <div className=" text-[13px] text-neutral-400">Developed by Sharwan jung kunwar</div>
         <ToastContainer />

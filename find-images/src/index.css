@@ -1,1 +1,19 @@
 @import 'tailwindcss';
+
+.mastShadow {
+  box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.1), 
+              0px 1px 0px 0px rgba(25, 28, 33, 0.02), 
+              0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+.Shadow {
+  box-shadow: 0px 2px 3px -1px rgba(0, 0, 0, 0.1), 
+              0px 1px 0px 0px rgba(25, 28, 33, 0.02), 
+              0px 0px 0px 1px rgba(25, 28, 33, 0.08);
+}
+
+.mastWhiteShadow {
+  box-shadow: 0px 2px 3px -1px rgba(238, 233, 233, 0.884), 
+              0px 1px 0px 0px rgba(20, 224, 224, 0.89), 
+              0px 0px 0px 1px rgba(21, 133, 245, 0.959);
+}
