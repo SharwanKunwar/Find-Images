@@ -80,12 +80,12 @@ function App() {
             <h1 className="lg:text-4xl text-2xl font-bold text-indigo-600"> Search For Images</h1>
         </div>
 
-        <form onSubmit={search} className="flex gap-1 justify-center items-center">
+        <form onSubmit={search} className="flex lg:gap-2 gap-1 justify-center items-center">
           <input
             type="text"
             
             placeholder="Search Images"
-            className="Shadow border-none outline-none bg-white rounded-full lg:w-[500px] w-[250px] h-[40px] pl-5"
+            className="Shadow border-none outline-none bg-white rounded-full lg:w-[500px] w-[290px] h-[40px] pl-5"
           />
           <button type="submit" className="Shadow bg-white hover:bg-gradient-to-br from-indigo-600 to-fuchsia-800 via-indigo-600 rounded-full w-[40px] h-[40px] hover:scale-101 transition-transform ">
             <i className="ri-search-line text-2xl hover:text-white"></i>
@@ -133,7 +133,7 @@ function App() {
           photo.length > 0 &&
           <button onClick={loadMore} className="Shadow bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-[200px] h-[40px] mt-10 rounded-sm text-white transition-transform duration-300 hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500">Load More</button>
         }
-        <div className=" text-[13px] text-neutral-400">Developed by Sharwan jung kunwar</div>
+        <div className="-mt-5 text-[13px] text-neutral-400">Developed by Sharwan jung kunwar</div>
         <ToastContainer />
       </div>
     </>
