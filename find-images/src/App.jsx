@@ -24,7 +24,7 @@ function App() {
         `https://api.pexels.com/v1/search?query=${find}&page=${page}&per_page=12`,
         options
       );
-      console.log(response);
+      
       setPhoto([
         ...photo,
         ...response.data.photos
@@ -72,9 +72,9 @@ function App() {
     <>
       {/* title */}
       <div className="bg-gray-100 min-h-screen flex flex-col items-center py-8 gap-8 animate__animated animate__fadeIn">
-        <div className=" flex gap-3">
+        <div className=" flex gap-3 justify-center items-center">
             <img src="/image.png" alt="img" width={40} height={40}/>
-            <h1 className="text-4xl font-bold text-indigo-600"> Search For Images</h1>
+            <h1 className="lg:text-4xl text-2xl font-bold text-indigo-600"> Search For Images</h1>
         </div>
 
         <form onSubmit={search} className="flex gap-1 justify-center items-center">
@@ -127,7 +127,7 @@ function App() {
         </div>
 
         {loading && (
-          <i class="ri-loader-2-line animate-spin text-4xl text-gray-400"></i>
+          <i className="ri-loader-2-line animate-spin text-4xl text-gray-400"></i>
         )}
 
         {
