@@ -62,6 +62,9 @@ function App() {
   }
   }
 
+  const viewImage = (src) => {
+    window.open(src, '_blank');
+  }
   
 
   useEffect(() => {
@@ -113,14 +116,10 @@ function App() {
               />
               <div className=" w-full h-[80px] p-1">
                 <h1 className="font-medium capitalize text-neutral-400">{item.photographer}</h1>
-                <button
-                  onClick={() =>
-                    downloadImage(item.src.original, item.photographer)
-                  }
-                  className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500"
-                >
-                  <i className="ri-download-2-line"></i> Download
-                </button>
+                <div className=" flex gap-3 justify-center items-center px-1">
+                  <button onClick={()=>viewImage(item.src.original)} className="bg-gradient-to-br from-indigo-500 to-orange-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-cyan-300 hover:via-indigo-500"><i className="ri-eye-line pr-1"></i>View</button>
+                  <button onClick={() => downloadImage(item.src.original, item.photographer)} className="bg-gradient-to-br from-indigo-500 to-cyan-400 via-indigo-500 w-full h-[35px] mt-2 rounded-sm text-white hover:bg-gradient-to-bl hover:from-indigo-700 hover:to-orange-300 hover:via-indigo-500"><i className="ri-download-2-line"></i> Download</button>
+                </div>
               </div>
             </div>
           ))}
