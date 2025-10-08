@@ -30,7 +30,7 @@ function App() {
         ...response.data.photos
       ]);
     } catch (err) {
-      toast.error("Faild to fetch images");
+      toast.error("Faild to fetch images maybe you cross the limit or internet is not working!!!");
     } finally {
       setLoading(false);
     }}
@@ -95,8 +95,8 @@ function App() {
 
         {
           photo.length === 0 && !loading && find !== "" && (
-            <div className="lg:w-6/12 w-[95%] h-[500px] flex justify-center items-center">
-              <img src="/404.png" alt="No images found" width={500} height={500} className="rounded-xl" />
+            <div className="lg:w-6/12 w-[95%] h-[450px] flex justify-center items-center Shadow">
+              <img src="/404.png" alt="No images found" width={500} height={500} className="rounded-xl Shadow" />
             </div>
           )
         }
