@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.14",
+    "animate.css": "^4.1.1",
+    "axios": "^1.12.2",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-toastify": "^11.0.5",
+    "remixicon": "^4.6.0",
     "tailwindcss": "^4.1.14"
   },
   "devDependencies": {
